@@ -1,0 +1,10 @@
+disabled_rules:
+  - variable_name
+  - force_cast
+  - function_body_length
+included:
+  - Flo
+excluded:
+  - Carthage
+  - Pods
+  - R.generated.swift
