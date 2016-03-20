@@ -13,6 +13,10 @@
 		7954ABCF1C9E68A800123142 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7954ABCE1C9E68A800123142 /* Assets.xcassets */; };
 		7954ABD21C9E68A800123142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7954ABD01C9E68A800123142 /* LaunchScreen.storyboard */; };
 		7954ABDA1C9E699A00123142 /* PushButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7954ABD91C9E699A00123142 /* PushButtonView.swift */; };
+		7954ABEB1C9E769700123142 /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7954ABE71C9E769700123142 /* Chameleon.framework */; };
+		7954ABEC1C9E769700123142 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7954ABE81C9E769700123142 /* RxCocoa.framework */; };
+		7954ABED1C9E769700123142 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7954ABE91C9E769700123142 /* RxSwift.framework */; };
+		7954ABEE1C9E769700123142 /* Swiftz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7954ABEA1C9E769700123142 /* Swiftz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		7954ABD11C9E68A800123142 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7954ABD31C9E68A800123142 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7954ABD91C9E699A00123142 /* PushButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushButtonView.swift; sourceTree = "<group>"; };
+		7954ABE71C9E769700123142 /* Chameleon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chameleon.framework; path = Carthage/Build/iOS/Chameleon.framework; sourceTree = "<group>"; };
+		7954ABE81C9E769700123142 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		7954ABE91C9E769700123142 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		7954ABEA1C9E769700123142 /* Swiftz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swiftz.framework; path = Carthage/Build/iOS/Swiftz.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7954ABEB1C9E769700123142 /* Chameleon.framework in Frameworks */,
+				7954ABED1C9E769700123142 /* RxSwift.framework in Frameworks */,
+				7954ABEC1C9E769700123142 /* RxCocoa.framework in Frameworks */,
+				7954ABEE1C9E769700123142 /* Swiftz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +52,7 @@
 		7954ABBB1C9E68A800123142 = {
 			isa = PBXGroup;
 			children = (
+				7954ABE61C9E767F00123142 /* Frameworks */,
 				7954ABC61C9E68A800123142 /* Flo */,
 				7954ABC51C9E68A800123142 /* Products */,
 			);
@@ -67,6 +80,17 @@
 			path = Flo;
 			sourceTree = "<group>";
 		};
+		7954ABE61C9E767F00123142 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7954ABE71C9E769700123142 /* Chameleon.framework */,
+				7954ABE81C9E769700123142 /* RxCocoa.framework */,
+				7954ABE91C9E769700123142 /* RxSwift.framework */,
+				7954ABEA1C9E769700123142 /* Swiftz.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +101,8 @@
 				7954ABC01C9E68A800123142 /* Sources */,
 				7954ABC11C9E68A800123142 /* Frameworks */,
 				7954ABC21C9E68A800123142 /* Resources */,
+				7954ABE41C9E75FF00123142 /* [Run Script - Carthage] Copy Frameworks */,
+				7954ABE51C9E764200123142 /* [Run Script - Swiftlint] Lint */,
 			);
 			buildRules = (
 			);
@@ -133,6 +159,41 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7954ABE41C9E75FF00123142 /* [Run Script - Carthage] Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Chameleon.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Swiftz.framework",
+			);
+			name = "[Run Script - Carthage] Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		7954ABE51C9E764200123142 /* [Run Script - Swiftlint] Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[Run Script - Swiftlint] Lint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = /usr/local/bin/swiftlint;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7954ABC01C9E68A800123142 /* Sources */ = {
@@ -254,6 +315,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Flo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sendyhalim.Flo;
@@ -265,6 +330,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Flo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sendyhalim.Flo;
