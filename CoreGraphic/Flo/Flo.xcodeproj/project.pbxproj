@@ -17,6 +17,7 @@
 		7954ABEC1C9E769700123142 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7954ABE81C9E769700123142 /* RxCocoa.framework */; };
 		7954ABED1C9E769700123142 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7954ABE91C9E769700123142 /* RxSwift.framework */; };
 		7954ABEE1C9E769700123142 /* Swiftz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7954ABEA1C9E769700123142 /* Swiftz.framework */; };
+		7954ABF01C9E7B7800123142 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7954ABEF1C9E7B7800123142 /* CounterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		7954ABE81C9E769700123142 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		7954ABE91C9E769700123142 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		7954ABEA1C9E769700123142 /* Swiftz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swiftz.framework; path = Carthage/Build/iOS/Swiftz.framework; sourceTree = "<group>"; };
+		7954ABEF1C9E7B7800123142 /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				7954ABD01C9E68A800123142 /* LaunchScreen.storyboard */,
 				7954ABD31C9E68A800123142 /* Info.plist */,
 				7954ABD91C9E699A00123142 /* PushButtonView.swift */,
+				7954ABEF1C9E7B7800123142 /* CounterView.swift */,
 			);
 			path = Flo;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				7954ABCA1C9E68A800123142 /* ViewController.swift in Sources */,
 				7954ABDA1C9E699A00123142 /* PushButtonView.swift in Sources */,
 				7954ABC81C9E68A800123142 /* AppDelegate.swift in Sources */,
+				7954ABF01C9E7B7800123142 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

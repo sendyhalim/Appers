@@ -1,0 +1,3 @@
+github "ReactiveX/RxSwift" "master"
+github "typelift/Swiftz" "master"
+github "ViccAlexander/Chameleon" "master"

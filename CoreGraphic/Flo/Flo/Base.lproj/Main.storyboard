@@ -37,15 +37,43 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSD-ay-VOH" customClass="CounterView" customModule="Flo" customModuleProvider="target">
+                                <rect key="frame" x="185" y="28" width="230" height="230"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXW-8s-wad">
+                                        <rect key="frame" x="95" y="95" width="40" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="7Dn-Ds-QDL"/>
+                                    <constraint firstItem="uXW-8s-wad" firstAttribute="leading" secondItem="fSD-ay-VOH" secondAttribute="leading" constant="95" id="B6U-c3-mMK"/>
+                                    <constraint firstItem="uXW-8s-wad" firstAttribute="centerY" secondItem="fSD-ay-VOH" secondAttribute="centerY" id="BYf-dN-xKO"/>
+                                    <constraint firstItem="uXW-8s-wad" firstAttribute="top" secondItem="fSD-ay-VOH" secondAttribute="top" constant="95" id="Hhu-41-Ved"/>
+                                    <constraint firstAttribute="width" constant="230" id="Y5D-sq-lJf"/>
+                                    <constraint firstItem="uXW-8s-wad" firstAttribute="centerX" secondItem="fSD-ay-VOH" secondAttribute="centerX" id="tlR-0p-mkN"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Qat-co-529" firstAttribute="centerX" secondItem="ddP-Se-XuH" secondAttribute="centerX" id="EIu-De-O8u"/>
+                            <constraint firstItem="fSD-ay-VOH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H6P-XD-VSt"/>
+                            <constraint firstItem="fSD-ay-VOH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="RKM-Du-gS8"/>
                             <constraint firstItem="ddP-Se-XuH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ibu-Ln-ppa"/>
                             <constraint firstItem="Qat-co-529" firstAttribute="top" secondItem="ddP-Se-XuH" secondAttribute="bottom" constant="21" id="mbp-xS-aSM"/>
                             <constraint firstItem="ddP-Se-XuH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="oUh-gM-i6o"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="uXW-8s-wad" id="bMe-zR-UWv"/>
+                        <outlet property="counterView" destination="fSD-ay-VOH" id="QNw-Bc-Pwg"/>
+                        <outlet property="decrementButton" destination="Qat-co-529" id="NYg-e4-8vd"/>
+                        <outlet property="incrementButton" destination="ddP-Se-XuH" id="QP5-wv-1yP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
