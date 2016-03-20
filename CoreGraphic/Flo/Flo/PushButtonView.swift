@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import Chameleon
 
 @IBDesignable
 class PushButtonView: UIButton {
-  var isAddButton = true
+  @IBInspectable var isAddButton: Bool = true
+  @IBInspectable var fillColor: UIColor = UIColor.flatGreenColor()
 
   override func drawRect(rect: CGRect) {
     let path = UIBezierPath(ovalInRect: rect)
-    UIColor.blueColor().setFill()
+    fillColor.setFill()
     path.fill()
     drawPlus()
   }

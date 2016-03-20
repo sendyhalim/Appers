@@ -24,10 +24,25 @@
                                     <constraint firstAttribute="width" constant="100" id="whX-hC-B64"/>
                                 </constraints>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qat-co-529" customClass="PushButtonView" customModule="Flo" customModuleProvider="target">
+                                <rect key="frame" x="275" y="471" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="wc7-rv-e5a"/>
+                                    <constraint firstAttribute="width" constant="50" id="wys-Xr-47c"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.89126098155975342" green="0.3545563817024231" blue="0.39968371391296387" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Qat-co-529" firstAttribute="centerX" secondItem="ddP-Se-XuH" secondAttribute="centerX" id="EIu-De-O8u"/>
                             <constraint firstItem="ddP-Se-XuH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ibu-Ln-ppa"/>
+                            <constraint firstItem="Qat-co-529" firstAttribute="top" secondItem="ddP-Se-XuH" secondAttribute="bottom" constant="21" id="mbp-xS-aSM"/>
                             <constraint firstItem="ddP-Se-XuH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="oUh-gM-i6o"/>
                         </constraints>
                     </view>
