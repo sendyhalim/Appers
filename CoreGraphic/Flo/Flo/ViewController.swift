@@ -11,6 +11,8 @@ import RxSwift
 import RxCocoa
 
 class ViewController: UIViewController {
+  @IBOutlet weak var containerView: UIView!
+  @IBOutlet weak var graphView: GraphView!
   @IBOutlet weak var counterLabel: UILabel!
   @IBOutlet weak var counterView: CounterView!
   @IBOutlet weak var decrementButton: PushButtonView!
