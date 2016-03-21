@@ -20,8 +20,12 @@ class ViewController: UIViewController {
 
   let disposeBag = DisposeBag()
 
+  var isGraphShowing = false
+
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    prepareGestureRecognizers()
 
     counterView
       .counter
@@ -38,6 +42,7 @@ class ViewController: UIViewController {
       .rx_tap
       .subscribeNext { [unowned self] in
         self.counterView?.counter.value++
+        self.onContainerViewTapped(nil)
       }
       .addDisposableTo(disposeBag)
 
@@ -46,6 +51,7 @@ class ViewController: UIViewController {
       .rx_tap
       .subscribeNext { [unowned self] in
         self.counterView?.counter.value--
+        self.onContainerViewTapped(nil)
       }
       .addDisposableTo(disposeBag)
   }
@@ -53,5 +59,34 @@ class ViewController: UIViewController {
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
+  }
+
+  func prepareGestureRecognizers() {
+    let tap = UITapGestureRecognizer(target: self, action: "onContainerViewTapped:")
+    containerView.addGestureRecognizer(tap)
+  }
+
+  func onContainerViewTapped(sender: UITapGestureRecognizer?) {
+    if isGraphShowing {
+      let options = UIViewAnimationOptions.TransitionFlipFromLeft.union(.ShowHideTransitionViews)
+      UIView.transitionFromView(
+        graphView,
+        toView: counterView,
+        duration: 1.0,
+        options: options,
+        completion: nil
+      )
+    } else {
+      let options = UIViewAnimationOptions.TransitionFlipFromRight.union(.ShowHideTransitionViews)
+      UIView.transitionFromView(
+        counterView,
+        toView: graphView,
+        duration: 1.0,
+        options: options,
+        completion: nil
+      )
+    }
+
+    isGraphShowing = !isGraphShowing
   }
 }

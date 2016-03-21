@@ -17,11 +17,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddP-Se-XuH" customClass="PushButtonView" customModule="Flo" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddP-Se-XuH" customClass="PushButtonView" customModule="Flo" customModuleProvider="target">
                                 <rect key="frame" x="250" y="350" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="RqJ-op-5Gl"/>
+                                    <constraint firstAttribute="width" constant="100" id="ynb-pY-6Lj"/>
+                                </constraints>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qat-co-529" customClass="PushButtonView" customModule="Flo" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qat-co-529" customClass="PushButtonView" customModule="Flo" customModuleProvider="target">
                                 <rect key="frame" x="275" y="471" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="LyD-TB-FsR"/>
+                                    <constraint firstAttribute="height" constant="50" id="lIr-4e-fcB"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
                                         <color key="value" red="0.89126098155975342" green="0.3545563817024231" blue="0.39968371391296387" alpha="1" colorSpace="calibratedRGB"/>
@@ -29,8 +37,8 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Be2-ZA-qqv" userLabel="Container View">
-                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Be2-ZA-qqv" userLabel="Container View">
+                                <rect key="frame" x="150" y="28" width="300" height="300"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h6d-ob-W30" customClass="GraphView" customModule="Flo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="25" width="300" height="250"/>
@@ -50,9 +58,21 @@
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.98624199628829956" green="0.7796865701675415" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="AVo-ig-XAM"/>
+                                    <constraint firstAttribute="height" constant="300" id="huL-3O-Sxp"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qat-co-529" firstAttribute="top" secondItem="ddP-Se-XuH" secondAttribute="bottom" constant="21" id="8xB-Kb-pCx"/>
+                            <constraint firstItem="Qat-co-529" firstAttribute="centerX" secondItem="ddP-Se-XuH" secondAttribute="centerX" id="Bdc-Ht-c3l"/>
+                            <constraint firstItem="ddP-Se-XuH" firstAttribute="centerX" secondItem="Be2-ZA-qqv" secondAttribute="centerX" id="OfI-Lq-w9a"/>
+                            <constraint firstItem="Be2-ZA-qqv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="c0j-f7-Z5C"/>
+                            <constraint firstItem="ddP-Se-XuH" firstAttribute="top" secondItem="Be2-ZA-qqv" secondAttribute="bottom" constant="22" id="nXy-TP-NCM"/>
+                            <constraint firstItem="Be2-ZA-qqv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tra-d6-THF"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="containerView" destination="Be2-ZA-qqv" id="oB6-EP-2ZD"/>
