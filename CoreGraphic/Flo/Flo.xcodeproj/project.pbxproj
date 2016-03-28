@@ -16,7 +16,6 @@
 		7954ABEB1C9E769700123142 /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7954ABE71C9E769700123142 /* Chameleon.framework */; };
 		7954ABEC1C9E769700123142 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7954ABE81C9E769700123142 /* RxCocoa.framework */; };
 		7954ABED1C9E769700123142 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7954ABE91C9E769700123142 /* RxSwift.framework */; };
-		7954ABEE1C9E769700123142 /* Swiftz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7954ABEA1C9E769700123142 /* Swiftz.framework */; };
 		7954ABF01C9E7B7800123142 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7954ABEF1C9E7B7800123142 /* CounterView.swift */; };
 		79C224DB1CA0471D00F48D0F /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C224DA1CA0471D00F48D0F /* GraphView.swift */; };
 /* End PBXBuildFile section */
@@ -46,7 +45,6 @@
 				7954ABEB1C9E769700123142 /* Chameleon.framework in Frameworks */,
 				7954ABED1C9E769700123142 /* RxSwift.framework in Frameworks */,
 				7954ABEC1C9E769700123142 /* RxCocoa.framework in Frameworks */,
-				7954ABEE1C9E769700123142 /* Swiftz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
