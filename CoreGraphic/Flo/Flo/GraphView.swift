@@ -79,5 +79,23 @@ class GraphView: UIView {
     }
 
     graphPath.stroke()
+
+    // Clip the bottom part of the graph
+    let clipPath = graphPath.copy() as! UIBezierPath
+    clipPath.addLineToPoint(CGPoint(
+      x: columnXPoint(graphPoints.count - 1),
+      y: height
+    ))
+
+    clipPath.addLineToPoint(CGPoint(
+      x: columnXPoint(0),
+      y: height
+    ))
+
+    clipPath.addClip()
+
+    UIColor.flatGreenColor().setFill()
+    let rectPath = UIBezierPath(rect: bounds)
+    rectPath.fill()
   }
 }
