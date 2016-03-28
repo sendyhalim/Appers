@@ -122,5 +122,20 @@ class GraphView: UIView {
       ))
       circle.fill()
     }
+
+    // Draw horizontal lines
+    let horizontalLinePath = UIBezierPath()
+    horizontalLinePath.moveToPoint(CGPoint(x: margin, y: topBorder))
+    horizontalLinePath.addLineToPoint(CGPoint(x: width - margin, y: topBorder))
+
+    horizontalLinePath.moveToPoint(CGPoint(x: margin, y: topBorder + (graphHeight / 2)))
+    horizontalLinePath.addLineToPoint(CGPoint(x: width - margin, y: topBorder + (graphHeight / 2)))
+
+    horizontalLinePath.moveToPoint(CGPoint(x: margin, y: topBorder + graphHeight))
+    horizontalLinePath.addLineToPoint(CGPoint(x: width - margin, y: topBorder + graphHeight))
+
+    UIColor(white: 1, alpha: 0.3).setStroke()
+    horizontalLinePath.lineWidth = 1.0
+    horizontalLinePath.stroke()
   }
 }
