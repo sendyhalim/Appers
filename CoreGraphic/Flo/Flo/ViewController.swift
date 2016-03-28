@@ -40,18 +40,26 @@ class ViewController: UIViewController {
 
     incrementButton
       .rx_tap
-      .subscribeNext { [unowned self] in
-        self.counterView?.counter.value++
-        self.onContainerViewTapped(nil)
+      .subscribeNext { [weak self] in
+        guard let strongSelf = self else {
+          return
+        }
+
+        strongSelf.counterView.counter.value = strongSelf.counterView.counter.value + 1
+        strongSelf.onContainerViewTapped(nil)
       }
       .addDisposableTo(disposeBag)
 
 
     decrementButton
       .rx_tap
-      .subscribeNext { [unowned self] in
-        self.counterView?.counter.value--
-        self.onContainerViewTapped(nil)
+      .subscribeNext { [weak self] in
+        guard let strongSelf = self else {
+          return
+        }
+
+        strongSelf.counterView.counter.value = strongSelf.counterView.counter.value - 1
+        strongSelf.onContainerViewTapped(nil)
       }
       .addDisposableTo(disposeBag)
   }
@@ -62,7 +70,10 @@ class ViewController: UIViewController {
   }
 
   func prepareGestureRecognizers() {
-    let tap = UITapGestureRecognizer(target: self, action: "onContainerViewTapped:")
+    let tap = UITapGestureRecognizer(
+      target: self,
+      action: #selector(ViewController.onContainerViewTapped(_:))
+    )
     containerView.addGestureRecognizer(tap)
   }
 
