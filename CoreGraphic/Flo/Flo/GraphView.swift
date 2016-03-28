@@ -78,7 +78,7 @@ class GraphView: UIView {
       graphPath.addLineToPoint(nextPoint)
     }
 
-    graphPath.stroke()
+    CGContextSaveGState(context)
 
     // Clip the bottom part of the graph
     let clipPath = graphPath.copy() as! UIBezierPath
@@ -97,5 +97,30 @@ class GraphView: UIView {
     UIColor.flatGreenColor().setFill()
     let rectPath = UIBezierPath(rect: bounds)
     rectPath.fill()
+
+    // Draw the gradient below the graph lines
+    CGContextDrawLinearGradient(
+      context,
+      gradient,
+      CGPoint(x: margin, y: columnYPoint(graphPoints.count - 1)),
+      CGPoint(x: margin, y: height),
+      CGGradientDrawingOptions.DrawsBeforeStartLocation
+    )
+    CGContextRestoreGState(context)
+
+    graphPath.lineWidth = 2.0
+    graphPath.stroke()
+
+    for i in 0..<graphPoints.count {
+      let nextPoint = CGPoint(
+        x: columnXPoint(i) - 2.5,
+        y: columnYPoint(graphPoints[i]) - 2.5
+      )
+      let circle = UIBezierPath(ovalInRect: CGRect(
+        origin: nextPoint,
+        size: CGSize(width: 5.0, height: 5.0)
+      ))
+      circle.fill()
+    }
   }
 }
