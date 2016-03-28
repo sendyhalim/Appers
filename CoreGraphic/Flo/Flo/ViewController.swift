@@ -20,7 +20,7 @@ class ViewController: UIViewController {
 
   let disposeBag = DisposeBag()
 
-  var isGraphShowing = false
+  var isGraphShowing = true
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -46,7 +46,10 @@ class ViewController: UIViewController {
         }
 
         strongSelf.counterView.counter.value = strongSelf.counterView.counter.value + 1
-        strongSelf.onContainerViewTapped(nil)
+
+        if strongSelf.isGraphShowing {
+          strongSelf.onContainerViewTapped(nil)
+        }
       }
       .addDisposableTo(disposeBag)
 
@@ -59,7 +62,10 @@ class ViewController: UIViewController {
         }
 
         strongSelf.counterView.counter.value = strongSelf.counterView.counter.value - 1
-        strongSelf.onContainerViewTapped(nil)
+
+        if strongSelf.isGraphShowing {
+          strongSelf.onContainerViewTapped(nil)
+        }
       }
       .addDisposableTo(disposeBag)
   }
