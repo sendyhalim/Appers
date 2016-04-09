@@ -64,5 +64,37 @@ class CounterView: UIView {
     outlineColor.setStroke()
     outlinePath.lineWidth = 5.0
     outlinePath.stroke()
+
+    let context = UIGraphicsGetCurrentContext()
+    CGContextSaveGState(context)
+    outlineColor.setFill()
+
+    let markerWidth: CGFloat = 5.0
+    let markerHeight: CGFloat = 10.0
+    let markerPath = UIBezierPath(rect: CGRect(
+      x: (-markerWidth / 2),
+      y: 0,
+      width: markerWidth,
+      height: markerHeight
+    ))
+
+    CGContextTranslateCTM(context, rect.width / 2, rect.height / 2)
+    // The drawn rectangle has angle equals to 90 degrees, 
+    // we're reducing it by 90 degrees (half radian), 
+    // because 0 degree is located at 3 o'clock
+    let zeroDegree = -(π / 2)
+
+    for i in 1...NO_OF_GLASSES {
+      CGContextSaveGState(context)
+      let angle = zeroDegree + startAngle + (arcLengthPerGlass * CGFloat(i))
+      CGContextRotateCTM(context, angle)
+      CGContextTranslateCTM(context, 0, (rect.height / 2) - markerHeight)
+      markerPath.fill()
+      CGContextRestoreGState(context)
+    }
+
+
+    // Restore the original state in case of more painting
+    CGContextRestoreGState(context)
   }
 }

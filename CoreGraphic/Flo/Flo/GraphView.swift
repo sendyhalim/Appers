@@ -11,7 +11,6 @@ import Chameleon
 
 @IBDesignable
 class GraphView: UIView {
-
   @IBInspectable var startColor: UIColor = UIColor.flatBlueColor()
   @IBInspectable var endColor: UIColor = UIColor.flatSkyBlueColor()
 
